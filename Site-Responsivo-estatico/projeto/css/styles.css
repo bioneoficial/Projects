@@ -77,7 +77,7 @@ h2{ font-size: 30x;
 }
 #navBar ul {
   float: right;
-  margin-top: 22px;
+  margin-top: -22px;
 }
 #navBar li{
   margin: 0 10px;
@@ -87,7 +87,7 @@ h2{ font-size: 30x;
   color: white;
 }
 
-#NavBarList:hover{ border-bottom: 1px solid white;
+li:hover{ border-bottom: 1px solid white; cursor: pointer;
 }
 
 /* Banner */
