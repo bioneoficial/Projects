@@ -1,0 +1,526 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  font-family:'Roboto', sans-serif ;
+}
+
+input, textarea{
+  margin: 0; font-family: 'Roboto', sans-serif;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h2{ font-size: 30x;
+}
+
+/* NavBar */
+
+#navBar {
+  background-color: red;
+  color: white;
+  padding: 0 15px;
+  height: 60px;
+}
+
+#navBar h2, #navBar ul, #navBarList li{
+  display:flex;
+}
+
+#navBar h2{
+  margin: 0;
+  line-height: 60px;
+  margin-left: 55px;
+}
+
+#navBarImg {
+  height:40px ;
+  width: 3%;
+  position: absolute;
+  top: 10px;
+}
+#navBar ul {
+  float: right;
+  margin-top: -22px;
+
+}
+#navBar li{
+  margin: 0 10px;
+
+}
+
+#NavBarList{
+  color: white;
+}
+
+li:hover{ border-bottom: 1px solid white; cursor: pointer;
+}
+
+/* Banner */
+
+#main-banner{
+  height: 70vh;
+  background-image: url(../img/bg-projeto.jpg);
+  background-size: cover;
+  padding-top: 15vh;
+}
+
+#banner-info{
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+#banner-info-img{
+  height: 120px;
+  border-radius: 50%;
+  background-color: red;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#banner-info p{
+  background-color: red;
+  font-weight: bolder;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+}
+
+#banner-info h2{
+  font-weight: bolder;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+
+/* about */
+
+#about-section{
+  text-align: center;
+  background-color: red;
+  color: white;
+  padding-top: 50px;
+  height: 350px;
+}
+
+#about-section h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+    font-weight: bolder;
+  }
+
+  #about-section p {
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 30px;
+  }
+
+  /* skills */
+
+  #skills {
+    margin-top: -50px;  
+    /* ATENAO NO MARGINTOP */
+    background-color: white;
+    width: 50%;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+    border-radius: 10px; 
+  }
+
+  h3{
+    font-weight: bold;
+  }
+  #skills .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.skills.container {
+  flex: 1 1 1;
+  text-align: center;
+  padding: 60px 25px;
+}
+
+.corr{
+  padding-right: 10px;
+}
+.central {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.skills-container h3{
+  color: red;
+  font-size: 20px;
+}
+
+
+
+.imgskill{
+  height: 100px;
+  margin-bottom: 25px;
+  border-top: 1px solid red;
+  border-left: 1px solid red;
+  border-bottom: 4px solid red;
+  border-right: 4px solid red;
+  }
+
+.subtitle {
+  font-weight: bold;
+  color: red;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+
+#job-section{
+  text-align: center;
+  padding-top: 50px;
+}
+
+#job-section h2 {
+  color: red;
+  margin-bottom: 30px;
+}
+
+#job-section p {
+  margin-bottom: 50px;
+}
+
+#job-section a{
+  font-weight: bold;
+  color: red;
+}
+
+#job-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.job-box{
+  flex: 1 1 200px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 300px;
+  background-size: cover;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+}
+
+.proj1 {
+  background-image: url(/projeto/img/proj1.jpg);
+}
+
+.proj2 {
+  background-image: url(/projeto/img/proj2.jpg);
+}
+
+.proj3 {
+  background-image: url(/projeto/img/proj3.jpg);
+}
+
+footer{
+padding: 50px 0;
+background-color: red;
+color: white;
+text-align: center;
+}
+
+footer img{
+  height: 50px;
+  margin-top: 30px 0;
+}
+
+footer p{
+  margin-top: 25px;
+
+}
+
+footer form{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer input, footer textarea{
+  border: none;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 90%;
+  display: block;
+}
+
+footer .detail{
+  font-weight: 700;
+}
+
+#job-section h2{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#job-section p{
+  text-decoration: none;
+}
+
+@media(max-width: 790px) {
+  p, input, textarea{
+    font-size: 1.2rem;
+  }
+
+  #navBar h2{ display: none;
+  }
+
+  #navBarImg{
+top: 9px;
+  }
+
+  #navBar ul{
+    margin-top: 1.1rem;
+  }
+
+#NavBarList li a{
+  font-size: 1,2rem;
+}
+/* banner para baixo, acima e navbar */
+
+#main-banner{
+  height: 40vh;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+}
+
+#banner-info{
+  width: 60%;
+}
+
+#banner-info-mg{
+  width: 50%;
+}
+#banner-info p{
+  margin: 0;
+  width: auto;
+}
+/* about */
+
+#about-section{
+  padding: 2rem;
+  height: auto;
+  padding-bottom: 50px;
+}
+/* skills */
+
+#skils{
+  margin-top:-35px ;
+  width:90% ;
+}
+
+#skills .container{
+  flex-direction: column;
+  padding: 25px;
+}
+
+.central {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  padding: 10px 0;
+  border-left: none;
+  border-right: none;  
+}
+
+.skills.container h3, .skills.container .subtitle {
+  font-size: 1.3rem;
+}
+
+/* jobs */
+
+.job-box{
+  margin-bottom: 2rem;
+  flex: 1 1 300px;
+}
+
+#job-container{
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+#job-section h2, #job-section p{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer{
+  padding: 50px 15px;
+}
+
+footer form{
+  width: 100%;
+}
+
+.detail{
+margin-top: 10px;
+display: block;
+}
+}
+
+@media(max-width: 490px) {
+  p, input, textarea{
+    font-size: 0.8rem;
+  }
+
+  #navBar h2{ display: none;
+  }
+
+  #navBarImg{
+top: 8px;
+  }
+
+  #navBar ul{
+    margin-top: 1rem;
+  }
+
+#NavBarList li a{
+  font-size: 0.8rem;
+}
+/* banner para baixo, acima e navbar */
+
+#main-banner{
+  height: 30vh;
+  padding-top: 4vh;
+  padding-bottom: 8vh;
+}
+
+#banner-info{
+  width: 60%;
+}
+
+#banner-info-mg{
+  width: 40%;
+}
+#banner-info p{
+  margin: 0;
+  width: auto;
+}
+/* about */
+
+#about-section{
+  padding: 1.5rem;
+  height: auto;
+  padding-bottom: 50px;
+}
+#about-section p{
+  font-size: 0.7em;
+}
+  
+/* skills */
+
+#skils{
+  margin-top:-20px ;
+  width:90% ;
+}
+/* PALIATIVO DA IMG3, CORRIGIR DIREITO */
+.img3{
+width: 150%;
+}
+
+#skills .container{
+  flex-direction: column;
+  padding: 20px;
+}
+
+.central {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  padding: 1px 0;
+  border-left: none;
+  border-right: none;  
+}
+
+.skills.container h3, .skills.container .subtitle {
+  font-size: 0.8rem;
+}
+
+/* jobs */
+
+.job-box{
+  margin-bottom: 1.5rem;
+  flex: 1 1 200px;
+}
+
+#job-container{
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+#job-section h2, #job-section p{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer{
+  padding: 40px 10px;
+}
+
+footer form{
+  width: 70%;
+}
+
+.detail{
+margin-top: 08px;
+display: block;
+}
+}
