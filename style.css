@@ -1,0 +1,127 @@
+html {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  width: 150px;
+  margin: -4px 8px 0 8px;
+  height: 30px;
+  background-image: url(sprites.svg);
+  background-position: 0 -500px;
+}
+
+#placeContent {
+  height: 800px;
+}
+
+header {
+  background-color: rgb(250, 250, 251);
+  border-top: 3px solid rgb(244, 128, 36);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 4px 0px, rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  height: 47px;
+  max-width: 1264px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.container,
+.footer {
+  max-width: 1264px;
+  margin: auto;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navBar {
+
+    width: 164px;
+    padding-top: 24px;
+   
+}
+nav{
+    position: sticky;
+    top: 74px;
+}
+.navBar .homeLink {
+    display: block;
+  background-color: rgb(239, 240, 241);
+  color: rgb(12, 13, 14);
+  text-decoration: none;
+  border-right: 3px solid rgb(244, 128, 36);
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.content {
+    padding: 24px;
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid rgb(214, 217, 220);
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+main{
+flex: 1 1 445px;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.panel {
+  border: 1px solid rgb(214, 217, 220);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 4px 0px, rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
+  margin-bottom: 16px;
+  width: 298px;
+  border-radius: 3px;
+}
+
+.panel > h2 {
+  background-color: rgb(250, 250, 251);
+  margin: 0;
+  padding: 12px 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(83, 90, 96);
+  border-bottom: 1px solid rgb(214, 217, 220);
+}
+
+.panel > div {
+  padding: 4px 15px;
+}
+
+footer {
+  background-color: rgb(36, 39, 41);
+  color: rgb(106, 115, 124);
+}
+
+.footer{
+    padding: 25px;
+}
+
+#placeFooter {
+  height: 100px;
+  text-align:center
+}
