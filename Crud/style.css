@@ -58,3 +58,10 @@ html {
     color: red;
   }
   
+  #bdelete,#bcancel,#bsubmit{
+    padding: 5px;
+    background-color:azure;
+    border-radius: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
