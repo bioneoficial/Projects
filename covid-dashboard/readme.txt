@@ -1,6 +1,6 @@
 to do list-
 Adjust Global
-Adjust diary changes in some places.
+day 1 to 10 debug
 Review USA/Israel
 
 Debug all code.
