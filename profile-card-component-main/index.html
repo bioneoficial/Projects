@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Bione | Profile card component </title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
   </style>
 </head>
+
 <body>
-  Victor Crest
-  26
-  London
+  <div class="container">
+    <div class="card ">
+      <div class="flex-item">
+        <img style=" width: 100%;" src="./images/bg-pattern-card.svg" alt="">
+        <img class="portrait" src="./images/image-victor.jpg" alt="">
+      </div>
+      <div class="content">
+        <p class="texto">Victor Crest <i>26</i></p> <br>
+        <p class="texto"><i> London </i></p>
+        <hr>
+        <ul>
+          <li>
+            <p class="texto">80K</p>
+          </li>
 
-  80K
-  Followers
+          <li>
+            <p class="texto"><i>Followers</i></p>
+          </li>
 
-  803K
-  Likes
+        </ul>
+        <ul>
+          <li>
+            <p class="texto">803K</p>
+          </li>
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+          <li>
+            <p class="texto"><i>Likes</i></p>
+          </li>
+
+        </ul>
+        <ul>
+          <li>
+            <p class="texto">1.4K</p>
+          </li>
+          <li>
+            <p class="texto"><i>Photos</i></p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Joao Bione</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
