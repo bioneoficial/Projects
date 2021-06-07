@@ -105,11 +105,16 @@ i{
 ul{
 	list-style: none;
 	display: inline-block;
-	margin-right: 50px;
+	margin-right: 40px;
 }
 
 @media screen and (max-width:375px){
 	.container{
 		width:300px;
+	}
+	ul{
+		list-style: none;
+		display: inline-block;
+		margin-right: 30px;
 	}
 }
