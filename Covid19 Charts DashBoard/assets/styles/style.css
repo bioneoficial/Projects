@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #343a40;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: calc(100vw-15px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+  overflow-x: hidden;
+  background-color: #343a40;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #343a40;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* color of the scroll thumb */
+  border-radius: 10px;
+  /* roundness of the scroll thumb */
+}
+
+#container {
+  max-width: 1180px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.load-modal {
+  width: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1px);
+  z-index: 99;
+  transition: 0.1s;
+}
+.load-modal--active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.load-modal .load {
+  width: 25px;
+  height: 25px;
+  border: 6px solid #343a40;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: load 0.5s linear infinite;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.header_container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 0px #e5e5e5;
+  font-weight: 400;
+  font-size: 20px;
+  z-index: 3;
+}
+.header_container span {
+  padding-left: 20px;
+}
+.header_container .mode-selector {
+  width: 45px;
+  height: 22px;
+  display: flex;
+  position: absolute;
+  padding: 2px 4px;
+  border-radius: 10px;
+  right: 20px;
+  background-color: #eeeeee;
+}
+.header_container .mode-selector span {
+  display: block;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #343a40;
+}
+
+#info {
+  width: 100%;
+  height: fit-content;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+}
+#info ul {
+  width: 100%;
+  height: 100%;
+  padding: 8px 0;
+  margin: 0px 10px;
+  list-style: none;
+}
+#info li {
+  display: inline;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: background-color, color 0.3s;
+}
+#info li:hover {
+  cursor: pointer;
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+main aside {
+  min-width: 350px;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  padding: 30px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 0px 0px #e5e5e5;
+  z-index: 2;
+}
+main aside #search > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+main aside #search > div:last-child {
+  margin-bottom: 0;
+}
+main aside #search > div select,
+main aside #search > div button,
+main aside #search > div input[type=date] {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 2px solid #dddddd;
+  background-color: #ffffff;
+}
+main aside #search > div button {
+  background-color: #eeeeee;
+  color: #343a40;
+  box-shadow: 2px 6px 0px 1px #343a40;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+main aside #search > div button:active {
+  transform: scale(0.95);
+}
+main section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main section #content {
+  width: 100%;
+  height: 100%;
+}
+main section #content #resume {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 10px;
+  padding: 10px 0;
+  grid-template-areas: "kpi pie" "bar bar";
+  background-color: #343a40;
+}
+main section #content #resume #kpi {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-area: kpi;
+}
+main section #content #resume #kpi span {
+  font-size: 12px;
+}
+main section #content #resume #pie {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  grid-area: pie;
+}
+main section #content #resume #pie canvas {
+  max-width: 460px;
+  max-height: 460px;
+}
+main section #content #resume #bar {
+  width: 100%;
+  justify-content: center;
+  grid-area: bar;
+  background-color: #ffffff;
+}
+main section #content #resume2 {
+  display: none;
+  flex-direction: column;
+  max-width: 100%;
+  height: 513px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+main section #content #resume2 #line {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+main section #content #resume2 #line canvas {
+  width: 100%;
+}
+main section #content #kpi2 {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  justify-content: space-around;
+}
+main section #content .card {
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  box-shadow: 2px 6px 0px 1px #343a40;
+}
+main section #content .card p {
+  font-size: 18px;
+}
+main section #content .card .compare {
+  padding-right: 5px;
+  font-size: 30px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.field.hidden {
+  display: none;
+}
+
+.selected {
+  background-color: #343a40;
+  color: #ffffff;
+  transition: background-color, color 0.3s;
+}
+.selected:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+  color: #343a40;
+}
+
+.error-message {
+  align-self: center;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: #ce425741;
+  color: #851524;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

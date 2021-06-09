@@ -1,0 +1,355 @@
+$simpleBorder: 2px solid #dddddd;
+
+// Declaração de variáveis
+$gray800: #343a40;
+$gray100: #e5e5e5;
+$gray50: #eeeeee;
+$white: #ffffff;
+$white50: rgba(255, 255, 255, 0.7);
+$red100: #ce425741;
+$red400: #851524;
+
+@mixin widthAndHeight {
+  width: 100%;
+  height: 100%;
+}
+@mixin displayFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: $gray800;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  width: calc(100vw-15px);
+  min-height: 100vh;
+  @include displayFlex();
+  position: relative;
+  margin-top: 10px;
+  overflow-x: hidden;
+  background-color: $gray800;
+}
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: $gray800; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $white50; /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  // border: 1px solid $gray50; /* creates padding around scroll thumb */
+}
+
+#container {
+  max-width: 1180px;
+  @include widthAndHeight();
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.load-modal {
+  width: 0;
+  height: 0;
+  @include displayFlex();
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: $white50;
+  backdrop-filter: blur(1px);
+  z-index: 99;
+  transition: 0.1s;
+
+  &--active {
+    @include widthAndHeight();
+    opacity: 1;
+  }
+
+  .load {
+    width: 25px;
+    height: 25px;
+    border: 6px solid $gray800;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: load 0.5s linear infinite;
+  }
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $white;
+}
+
+.header_container {
+  width: 100%;
+  height: 50px;
+  @include displayFlex();
+  justify-content: flex-start;
+  position: relative;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 0px $gray100;
+  font-weight: 400;
+  font-size: 20px;
+  z-index: 3;
+
+
+  span {
+    padding-left: 20px;
+  }
+
+  .mode-selector {
+    width: 45px;
+    height: 22px;
+    display: flex;
+    position: absolute;
+    padding: 2px 4px;
+    border-radius: 10px;
+    right: 20px;
+    background-color: $gray50;
+
+    span {
+      display: block;
+      // width: px;
+      height: 100%;
+      border-radius: 50%;
+      background-color: $gray800;
+    }
+  }
+}
+
+#info {
+  width: 100%;
+  height: fit-content;
+  background-color: $gray50;
+  display: flex;
+  align-items: center;
+
+  ul {
+    @include widthAndHeight();
+    padding: 8px 0;
+    margin: 0px 10px;
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    transition: background-color, color 0.3s;
+    &:hover {
+      cursor: pointer;
+      background-color: $gray800;
+      color: $white;
+    }
+  }
+}
+
+main {
+  @include widthAndHeight();
+  display: flex;
+
+  aside {
+    min-width: 350px;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 30px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 2px 0px 0px $gray100;
+    z-index: 2;
+
+    #search > div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-top: 10px;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      // border-top: $simpleBorder;
+
+      select,
+      button,
+      input[type="date"] {
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: $simpleBorder;
+        background-color: $white;
+      }
+
+      button {
+        // margin-top: 10px;
+        background-color: $gray50;
+        color: $gray800;
+        box-shadow: 2px 6px 0px 1px $gray800;
+        cursor: pointer;
+        transition: transform 0.1s;
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  section {
+    @include widthAndHeight();
+    display: flex;
+    flex-direction: column;
+
+    #content {
+      @include widthAndHeight();
+
+      #resume {
+        @include widthAndHeight();
+        display: grid;
+        gap: 10px;
+        padding: 10px 0;
+        grid-template-areas:
+          "kpi pie"
+          "bar bar";
+        background-color: $gray800;
+
+        #kpi {
+          @include widthAndHeight();
+          flex-direction: column;
+          justify-content: space-evenly;
+          grid-area: kpi;
+
+          span {
+            font-size: 12px;
+          }
+        }
+        #pie {
+          @include widthAndHeight();
+          justify-content: center;
+          grid-area: pie;
+          canvas {
+            max-width: 460px;
+            max-height: 460px;
+          }
+        }
+        #bar {
+          width: 100%;
+          justify-content: center;
+          grid-area: bar;
+          background-color: $white;
+        }
+      }
+
+      #resume2 {
+        display: none;
+        flex-direction: column;
+        max-width: 100%;
+        height: 513px;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: white;
+
+        #line {
+          @include widthAndHeight();
+          background-color: $white;
+
+          canvas {
+            width: 100%;
+          }
+        }
+      }
+
+      #kpi2 {
+        display: none;
+        width: 100%;
+        margin-top: 10px;
+        padding: 20px;
+        justify-content: space-around;
+      }
+
+      .card {
+        min-width: 250px;
+        @include displayFlex();
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background-color: $gray50;
+        border-radius: 8px;
+        box-shadow: 2px 6px 0px 1px $gray800;
+
+        p {
+          font-size: 18px;
+        }
+
+        .compare {
+          padding-right: 5px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: $white;
+  &.hidden {
+    display: none;
+  }
+}
+
+.selected {
+  background-color: $gray800;
+  color: $white;
+  transition: background-color, color 0.3s;
+  &:hover {
+    cursor: pointer;
+    background-color: $gray50;
+    color: $gray800;
+  }
+}
+
+.error-message {
+  align-self: center;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: $red100;
+  color: $red400;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}

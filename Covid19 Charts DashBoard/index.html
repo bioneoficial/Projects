@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>Covid-19 Dashboard</title>
+
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <div class="header_container">
+        <span>Joao Bione</span>
+        <div class="mode-selector" style="visibility: hidden;"><span></span></div>
+      </div>
+      <nav id="info">
+        <ul>
+          <li class="selected" id="home">Home</li>
+          <li id="pais">Country</li>
+          <li id="top5" style="visibility: hidden;">Top 5</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <div id="search">
+          <div class="date-container">
+            <label for="inicial-date">Initial date:</label>
+            <input type="date" name="date" id="inicial-date" value="2021-05-01">
+            <label for="final-date">Final date:</label>
+            <input type="date" name="date" id="final-date" value="2021-05-25">
+          </div>
+          <div class="country-container">
+            <label for="countries-select">Select country:</label>
+            <select name="countries" id="countries-select"></select>
+          </div>
+          <div class="filter-container">
+            <label for="filter-select">Select filter:</label>
+            <select name="countries" id="filter-select"></select>
+            <button id="btn-apply" type="button">Apply...</button>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <div id="content">
+          <div id="resume">
+            <div class="field" id="kpi">
+              <div class="card confirmeds">
+                <h3>Total Confirmed</h3>
+                <p></p>
+              </div>
+              <div class="card deaths">
+                <h3>Total Deaths</h3>
+                <p></p>
+              </div>
+              <div class="card recovereds">
+                <h3>Total Recovered</h3>
+                <p></p>
+              </div>
+              <span id="date-updated"></span>
+            </div>
+            <div class="field" id="pie"><canvas></canvas></div>
+            <div class="field" id="bar"><canvas></canvas></div>
+          </div>
+          <div id="resume2">
+            <div class="field" id="line"><canvas width="960"></canvas></div>
+          </div>
+          <div class="field" id="kpi2">
+            <div class="card confirmeds">
+              <h3>Total Confirmed</h3>
+              <p></p>
+            </div>
+            <div class="card deaths">
+              <h3>Total Deaths</h3>
+              <p></p>
+            </div>
+            <div class="card recovereds">
+              <h3>Total Recovered</h3>
+              <p></p>
+            </div>
+          </div>
+      </section>
+    </main>
+  </div>
+  <div class="load-modal">
+    <div class="load">
+    </div>
+  </div>
+  <script>
+    document.querySelector('.load-modal').classList.toggle('load-modal--active');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/scripts/apiGet.js"></script>
+  <script src="./assets/scripts/charts.js"></script>
+  <script src="./assets/scripts/script.js"></script>
+</body>
+
+</html>
