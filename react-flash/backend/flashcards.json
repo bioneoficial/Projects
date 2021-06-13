@@ -1,0 +1,29 @@
+{
+  "flashcards": [
+    {
+      "id": "8225cf98-5b1d-4573-abed-f24cb1c8d583",
+      "title": "Are names case sensitive?",
+      "description": "Yes"
+    },
+    {
+      "id": "674e81b4-0c5b-4443-b74e-9f6f96be37fe",
+      "title": "can /* */ comments be nested?",
+      "description": "No"
+    },
+    {
+      "id": "c8538e5c-206b-47a5-a302-8e1ab9cce896",
+      "title": "let/var difference?",
+      "description": "Let for a block level variables, var for a function level"
+    },
+    {
+      "id": "19dcf809-edad-4c17-87c0-5f51b2ef1203",
+      "title": "Whats defensive semicolon?",
+      "description": "Semicolon at the start of the line to prevent accidental joining with previous statement"
+    },
+    {
+      "id": "524cae63-3df8-4d55-bd92-dca458f1b202",
+      "title": "when whitespace in source can impact semantics?",
+      "description": "Newline may trigger automatic semicolon insertion, for example return statement must occupy only one line"
+    }
+  ]
+}
