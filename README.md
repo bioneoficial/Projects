@@ -22,7 +22,7 @@ Covid19 Charts DashBoard -HTML5, Javascript(axios,chartjs)
 react-flash - React,Tailwind,Json                                                                 
 react-investiments-React,Tailwind,Json                                                                 
 react-elections -                                                                  
-react-tictactoe - React( with Redux)
+react-tictactoe - React( with Redux)                           
 Level 3 - Advanced:                                                                 
 schedule-react - React(TypeScript with React-router and Material-ui),Json                                                                 
                                                                  
