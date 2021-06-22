@@ -18,13 +18,13 @@ covid-dashboard-HTML5,CSS3,Javascript
 react-hello - React,Tailwind                                                                 
 
 Level 2 - Junior:                                                                 
-Covid19 Charts DashBoard -HTML5, Javascript                                                                 
+Covid19 Charts DashBoard -HTML5, Javascript(axios,chartjs)                                                                 
 react-flash - React,Tailwind,Json                                                                 
 react-investiments-React,Tailwind,Json                                                                 
 react-elections -                                                                  
-
+react-tictactoe - React( with Redux)
 Level 3 - Advanced:                                                                 
-schedule-react - React(TypeScript),Json                                                                 
+schedule-react - React(TypeScript with React-router and Material-ui),Json                                                                 
                                                                  
                                                                  
 Level 4 - Senior:                                                                 
