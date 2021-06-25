@@ -17,14 +17,16 @@ profile-card-component-main-HTML5,CSS3
 covid-dashboard-HTML5,CSS3,Javascript                                                                 
 react-hello - React,Tailwind                                                                 
 
-Level 2 - Junior:                                                                 
+Level 2 - Junior:    
+letmeaskreact - React,Typescript, react-router-dom, classnames.                                                               
 Covid19 Charts DashBoard -HTML5, Javascript(axios,chartjs)                                                                 
 react-flash - React,Tailwind,Json                                                                 
 react-investiments-React,Tailwind,Json                                                                 
 react-elections -                                                                  
-react-tictactoe - React( with Redux)                           
+react-tictactoe - React( with Redux)  
+reacttsex1-                                                                                                          
 Level 3 - Advanced:                                                                 
-schedule-react - React(TypeScript with React-router and Material-ui),Json                                                                 
+schedule-react - React(TypeScript with React-router-dom and Material-ui),Json                                                                 
                                                                  
                                                                  
 Level 4 - Senior:                                                                 
